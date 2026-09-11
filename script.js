@@ -35,3 +35,25 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 revealTargets.forEach(el => observer.observe(el));
+
+const copyEmailButton = document.getElementById('copyEmailButton');
+
+if (copyEmailButton) {
+  copyEmailButton.addEventListener('click', async () => {
+    const email = 'sgcnascimento@gmail.com';
+
+    try {
+      await navigator.clipboard.writeText(email);
+      const originalText = copyEmailButton.textContent;
+      copyEmailButton.textContent = 'E-mail copiado';
+      copyEmailButton.classList.add('copied');
+
+      setTimeout(() => {
+        copyEmailButton.textContent = originalText;
+        copyEmailButton.classList.remove('copied');
+      }, 1800);
+    } catch (error) {
+      window.prompt('Copie o e-mail abaixo:', email);
+    }
+  });
+}

@@ -112,14 +112,6 @@ img{max-width:100%;display:block}
   position:absolute;inset:0;
   background:linear-gradient(180deg,transparent 55%,rgba(11,28,41,.34) 100%)
 }
-.portrait-badge{
-  position:absolute;left:16px;bottom:16px;
-  display:flex;align-items:center;gap:8px;
-  padding:9px 12px;border-radius:999px;
-  background:rgba(255,255,255,.9);backdrop-filter:blur(10px);
-  font-size:.78rem;font-weight:800;color:var(--navy)
-}
-.status-dot{width:8px;height:8px;border-radius:50%;background:#4fa770;box-shadow:0 0 0 4px rgba(79,167,112,.13)}
 .portrait-info{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:17px 8px 4px}
 .mini-label{display:block;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-size:.69rem;font-weight:900;margin-bottom:4px}
 .portrait-info strong{font-size:.96rem}
@@ -282,4 +274,48 @@ img{max-width:100%;display:block}
   html{scroll-behavior:auto}
   .reveal-item{opacity:1;transform:none;transition:none}
   .btn,.content-card,.competency-card,.education-card{transition:none}
+}
+
+.contact-actions-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  min-width:min(100%, 430px);
+}
+.contact-email{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+.contact-email span{
+  font-size:.74rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:900;
+  color:#b9c7d1;
+}
+.contact-email a{
+  color:#fff;
+  font-weight:800;
+  word-break:break-word;
+}
+.contact-email a:hover{
+  color:#d8bc8e;
+}
+.email-help{
+  margin:0;
+  max-width:430px;
+  color:#aebdc8 !important;
+  font-size:.82rem;
+  line-height:1.45;
+}
+button.btn{
+  border:1px solid transparent;
+  cursor:pointer;
+  font-family:inherit;
+}
+#copyEmailButton.copied{
+  background:#fff;
+  color:#17374d;
+  border-color:#fff;
 }
