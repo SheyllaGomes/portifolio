@@ -1,4 +1,4 @@
-Portfólio Sheila Gomes — Frontend v7
+Portfólio Sheilah Gomes de Castro — Frontend v7
 Versão refinada com foco em:
 visual mais premium e menos parecido com currículo;
 destaque maior para a foto profissional;
